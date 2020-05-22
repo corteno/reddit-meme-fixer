@@ -36,7 +36,7 @@
         },
         data: function () {
             return {
-                value: 'https://www.reddit.com/r/modernwarfare/comments/go38jw/the_entire_playerbase_once_price_drops_in_season_4/',
+                value: '',
                 errorMessage: '',
                 textBlockHeight: 75,
                 characterLimitPerLine: '55'
@@ -49,7 +49,7 @@
                 if (this.validateUrl(this.value)) {
                     let url = this.value + ".json";
 
-                    axios.post('http://192.168.0.87:3000/meme', {
+                    axios.post('https://reddit-meme-fixer.herokuapp.com/meme', {
                         data: url
                     }).then((response) => {
                         //console.log(response.data);
